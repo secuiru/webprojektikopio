@@ -7,10 +7,10 @@ import java.util.List;
 
 
 @Repository
-public interface DataRepository extends JpaRepository <Dataset, Long> {
+public interface DataRepository extends JpaRepository <Dataset, String> {
 
-    @Query(value ="SELECT * FROM hadcrut_5_0_1_0_analysis_summary_series_global_monthly", nativeQuery= true)
-    List<String> getdata();
+    @Query(value ="SELECT * FROM hadcrut_5_0_1_0_analysis_summary_series_global_monthly__1__1", nativeQuery= true)
+    List<Dataset> getdata();
 
     
 }

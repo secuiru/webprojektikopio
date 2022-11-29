@@ -1,8 +1,7 @@
 package com.webprojekti.webprojekti;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,17 +9,19 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="hadcrut_5_0_1_0_analysis_summary_series_global_monthly")
+@Table(name="hadcrut_5_0_1_0_analysis_summary_series_global_monthly__1__1")
 public class Dataset {
 
     
     
     @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String time1;
-    private String anomalydegc;
+    @Column(name ="col1")
+    private String time;
+    @Column(name ="col2")
+    private String anomalyc;
+    @Column(name ="col3")
     private String lowerconlim;
+    @Column(name="col4")
     private String upperconlim;
     
    
@@ -29,19 +30,19 @@ public class Dataset {
 
 
     public String getTime() {
-        return this.time1;
+        return this.time;
     }
 
-    public void setTime(String time1) {
-        this.time1 = time1;
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getAnomalydeg() {
-        return this.anomalydegc;
+        return this.anomalyc;
     }
 
-    public void setAnomalydeg(String anomalydegc) {
-        this.anomalydegc = anomalydegc;
+    public void setAnomalydeg(String anomalyc) {
+        this.anomalyc = anomalyc;
     }
 
     public String getLowerconlim() {

@@ -21,8 +21,10 @@ public class Controller {
     }
 
     @CrossOrigin(origins="http://localhost:3000")
-    @GetMapping("/data")List<String>data(){
-        return repository2.getdata();
+    @GetMapping("/data")List<Dataset>data(){
+       
+     
+        return repository2.findAll();
 
     }
   
